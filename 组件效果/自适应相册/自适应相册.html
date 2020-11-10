@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+				font-family: montserrat,sans-serif;
+				box-sizing: border-box;
+			}
+			.gallery-section{
+				width: 100%;
+				padding: 60px 0;
+				background: #f1f1f1;
+			}
+			.inner-width{
+				width: 100%;
+				max-width: 1200px;
+				margin:auto;
+				padding: 0 20px;
+			}
+			.gallery-section h1{
+				text-align: center;
+				text-transform: uppercase;
+				color: #333;
+			}
+			.border{
+				width:180px;
+				height: 4px;
+				background: #333;
+				margin: 60px auto;
+			}
+			.gallery-section .gallery{
+				display: flex;
+				flex-wrap: wrap-reverse;
+				justify-content: center;
+			}
+			.gallery-section .image{
+				flex: 25%;
+				overflow: hidden;
+				cursor: pointer;
+			}
+			
+			.gallery-section .image img{
+				width:100%;
+				height: 100%;
+				transition: .4s;
+			}
+			/*.gallery-section .image:hover img{
+				transform: scale(1.4);
+			}*/
+			 .gallery-section .image:hover #myImg{transform: scale(1.4) rotate(15deg);}
+			
+			
+			
+			@media screen and (max-width:960px){
+				.gallery-section .image{
+					flex: 33.33%;
+				}
+			}
+			@media screen and (max-width:768px){
+				.gallery-section .image{
+					flex: 50%;
+				}
+			}
+			@media screen and (max-width:48px){
+				.gallery-section .image{
+					flex: 100%;
+				}
+			}
+			
+			
+			
+
+			/* The Modal (background) */
+			.modal {
+			    display: none; /* Hidden by default */
+			    position: fixed; /* Stay in place */
+			    z-index: 1; /* Sit on top */
+			    padding-top: 100px; /* Location of the box */
+			    left: 0;
+			    top: 0;
+			    width: 100%; /* Full width */
+			    height: 100%; /* Full height */
+			    overflow: auto; /* Enable scroll if needed */
+			    background-color: rgb(0,0,0); /* Fallback color */
+			    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+			}
+
+			/* Modal Content (image) */
+			.modal-content {
+			    margin: auto;
+			    display: block;
+			    width: 100%;
+			    max-height: 500px;
+			    max-width: 800px;
+			}
+
+			/* Caption of Modal Image */
+			#caption {
+			    margin: auto;
+			    display: block;
+			    width: 100%;
+			    max-width: 800px;
+			    text-align: center;
+			    color: #ccc;
+			    padding: 10px 0;
+			    height: 150px;
+			}
+            /*Modal Image css*/
+            #modalimg :hover{ 
+            	/*!important*/
+            	transform: scale(1);
+            }
+			/* Add Animation */
+			.modal-content, #caption {    
+			    -webkit-animation-name: zoom;
+			    -webkit-animation-duration: 0.6s;
+			    animation-name: zoom;
+			    animation-duration: 0.6s;
+			}
+
+			@-webkit-keyframes zoom {
+			    from {-webkit-transform: scale(0)} 
+			    to {-webkit-transform: scale(1)}
+			}
+
+			@keyframes zoom {
+			    from {transform: scale(0.1)} 
+			    to {transform: scale(1)}
+			}
+
+			/* The Close Button */
+			.close {
+			    position: absolute;
+			    top: 15px;
+			    right: 35px;
+			    color: #f1f1f1;
+			    font-size: 40px;
+			    font-weight: bold;
+			    transition: 0.3s;
+			}
+
+			.close:hover,
+			.close:focus {
+			    color: #bbb;
+			    text-decoration: none;
+			    cursor: pointer;
+			}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+		</style>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<body>
+		<div class="gallery-section">
+			<div class="inner-width">
+				<h1>My Gallery</h1>
+				<div class="border"></div>
+				<div class="gallery">
+				    <div class="image">
+				    	<img id="myImg" src="1.jpg" alt="图一">
+				    	<div id="myModal" class="modal">
+				    		<span class="close">×</span>
+				    		<img class="modal-content" id="modalimg">
+						    <div id="caption"></div>
+				    	</div>
+				    </div>
+				    <div class="image">
+				    	<img id="myImg" src="2.jpg" alt="图二">
+				    	<div id="myModal" class="modal">
+				    		<span class="close">×</span>
+				    		<img class="modal-content" id="modalimg">
+						    <div id="caption"></div>
+				    	</div>
+				    </div>
+				    <div class="image">
+				    	<img id="myImg" src="3.jpg" alt="图三">
+				    	<div id="myModal" class="modal">
+				    		<span class="close">×</span>
+				    		<img class="modal-content" id="modalimg">
+						    <div id="caption"></div>
+				    	</div>
+				    </div>
+				    <div class="image">
+				    	<img id="myImg" src="4.jpg" alt="图四">
+				    	<div id="myModal" class="modal">
+				    		<span class="close">×</span>
+				    		<img class="modal-content" id="modalimg">
+						    <div id="caption"></div>
+				    	</div>
+				    </div>
+				    <div class="image">
+				    	<img id="myImg" src="5.jpg" alt="图五">
+				    	<div id="myModal" class="modal">
+				    		<span class="close">×</span>
+				    		<img class="modal-content" id="modalimg">
+						    <div id="caption"></div>
+				    	</div>
+				    </div>
+				    <div class="image">
+				    	<img id="myImg" src="6.jpg" alt="图六">
+				    	<div id="myModal" class="modal">
+				    		<span class="close">×</span>
+				    		<img class="modal-content" id="modalimg">
+						    <div id="caption"></div>
+				    	</div>
+				    </div>
+				    <div class="image">
+				    	<img id="myImg" src="7.jpg" alt="图七">
+				    	<div id="myModal" class="modal">
+				    		<span class="close">×</span>
+				    		<img class="modal-content" id="modalimg">
+						    <div id="caption"></div>
+				    	</div>
+				    </div>
+				    <div class="image">
+				    	<img id="myImg" src="8.jpg" alt="图八">
+				    	<div id="myModal" class="modal">
+				    		<span class="close">×</span>
+				    		<img class="modal-content" id="modalimg">
+						    <div id="caption"></div>
+				    	</div>
+				    </div>
+
+				</div>
+			</div>
+		</div>
+		<script>
+		
+
+
+
+		// 获取模态窗口
+		const modal = document.getElementById('myModal');
+		
+     	// 获取图片模态框，alt 属性作为图片弹出中文本描述
+		let imgs = document.getElementsByTagName('img');
+
+		const modalImg = document.getElementById("modalimg");
+		const captionText = document.getElementById("caption");
+	   for(let i = 0;i<imgs.length;i++){
+				imgs[i].index = i;
+				imgs[i].onclick = function () {
+					// alert(this.index+1);
+					modal.style.display = "block";
+				    modalImg.src = this.src;
+				    modalImg.alt = this.alt;
+				    captionText.innerHTML = this.alt;
+				}
+			}
+// 		// 获取 <span> 元素，设置关闭模态框按钮
+		var span = document.getElementsByClassName("close")[0];
+		
+// 		// 点击 <span> 元素上的 (x), 关闭模态框
+		span.onclick = function() { 
+		    modal.style.display = "none";
+		}
+	</script>
+	</body>
+	
+</html>

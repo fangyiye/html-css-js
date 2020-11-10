@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{margin: 0;padding:0;box-sizing: border-box;}
+		a{text-decoration: none;}
+		body,html{width:100%;height:100%;}
+		body{
+			background: #f9f9f9;
+		}
+		.main{
+			width:100%;
+			height:100%;
+			display:flex;
+			justify-content:center;
+			align-items: center;
+		}
+		.item{
+			position:relative;
+			width:220px;
+			height: 220px;
+			background: url() no-repeat;
+			border-radius: 50%;
+			box-shadow: inset 0 0 0 16px rgba(255,255,255,.6),0 1px 2px rgba(0,0,0,.1);
+			transition: all .4s ease-in-out;
+		}
+		.info{
+			opacity:0;
+			transform:scale(0);
+			position:absolute;
+			width:100%;
+			height:100%;
+			background:rgba(63,147,147,.8);
+			border-radius: 50%;
+			text-align: center;
+			transition: all .4s ease-in-out;
+		}
+		.info h3{
+			height:140px;
+			font-size:22px;
+			color: #fff;
+			margin:0 30px;
+			padding-top:45px;
+			text-transform:uppercase;
+		}
+		.info p{
+			opacity:0;
+			font-size:12px;
+			color: #fff;
+			font-style: italic;
+			margin:0 30px;
+			padding-top:10px;
+			border-top:1px solid rgba(255,255,255,.5);
+			transition: all .4s ease-in-out .4s;
+		}
+		.info a{
+			display: block;
+			color:#fff;
+			font-size:normal;
+		}
+		.item:hover{
+			box-shadow: inset 0 0 0 1px rgba(255,255,255,.1),0 1px 2px rgba(0,0,0,.1);
+		}
+		.item:hover .info{
+			opacity:1;
+			transform:scale(1);
+		}
+		.item:hover .info p{
+			opacity:1;
+		}
+	</style>
+</head>
+<body>
+<div class="main">
+	<div class="item">
+		<div class="info">
+			<h3>use what you have</h3>
+            <p>by Angela duncan<a href="#">View on more</a></p>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

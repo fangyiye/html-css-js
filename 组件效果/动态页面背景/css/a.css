@@ -1,0 +1,79 @@
+*{  
+            margin: 0px;  
+            padding: 0px;  
+        }  
+        video{  
+            position: fixed;  
+            right: 0px;  
+            bottom: 0px;  
+            min-width: 100%;  
+            min-height: 100%;  
+            height: auto;  
+            width: auto;  
+         /* // 加滤镜*/
+            filter: blur(15px); //背景模糊设置 
+            -webkit-filter: grayscale(100%);
+            filter:grayscale(100%); //背景灰度设置
+            z-index:-11
+        }  
+        source{  
+            min-width: 100%;  
+            min-height: 100%;  
+            height: auto;  
+            width: auto;  
+        }
+
+#login_box{
+width: 20%;
+height: 270px;
+margin: auto;
+margin-top: 10%;
+text-align: center;
+border-radius: 10px;
+padding: 50px 50px;
+background: gainsboro;
+filter:alpha(Opacity=60);
+/*-moz-opacity:0.6;*/
+opacity: 0.6;
+}
+#login_box h2{
+color:black;
+margin-top: 5%;
+}
+#login_box #login_form #login_input{
+margin-top: 5%;
+}
+#login_box #login_form #login_input input{
+border: 0;
+width: 60%;
+font-size: 15px;
+color: black;
+background-color:  transparent;
+border-bottom: 2px solid #FFFFFF;
+padding: 5px 10px;
+margin-top: 10px;
+}
+#login_box button{
+ 
+}
+#sign_in{
+    display: inline-block;
+    text-decoration: none;
+	margin-top:50px;
+	width: 70px;
+	height: 20px;
+	border-radius: 10px;
+	border: 0;
+	color:black;
+	background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+	font-size: 15px;
+    overflow: hidden;
+}
+#login_box #login_forgot{
+margin-top: 18%;
+margin-left: 80%;
+}
+#login_box #login_forgot a{
+color: saddlebrown;
+font-size: 13px;
+}

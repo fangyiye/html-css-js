@@ -1,0 +1,102 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #f5f5f5;
+}
+
+.carousel, .imgContain {
+	width: 100vw;
+	height: 400px;
+	position: relative;
+}
+
+.carousel-item{
+	width: 0;
+	height: 400px;
+	list-style: none;
+	opacity: 0;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.carousel-item > img{
+	width: 100%;
+	height: 100%;
+}
+
+.carousel-item.active{
+	width: 55vw;
+	opacity: 1;
+	transition: all 1s;
+}
+
+.leftBtn, .rightBtn{
+	width: 40px;
+	height: 400px;
+	opacity: 0;
+	text-align: center;
+	line-height: 400px;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	transition: all 1s;
+}
+
+.leftBtn {
+	left: 22.5vw;
+}
+
+.rightBtn{
+	right: 22.5vw;
+}
+
+.leftBtn:hover,
+.rightBtn:hover {
+	opacity: 1;
+	background-color: rgba(0,0,0,.6);
+	transition: all 1s;
+}
+
+.leftBtn i, .rightBtn i{
+	color: #fff;
+	font-size: 2em;
+}
+
+.rectContain{
+	width: 55vw;
+	height: 10px;
+	list-style: none;
+	opacity: 0;
+	position: absolute;
+	left: 50%;
+	bottom: 5px;
+	transform: translateX(-50%);
+	display: flex;
+	justify-content: center;
+	transition: all 0.5s;
+}
+
+.imgContain:hover ~ .rectContain {
+	opacity: 1;
+	transition: all 0.5s;
+}
+
+.rect{
+	width: 60px;
+	height: 10px;
+	margin: 0 3px;
+	border-radius: 10px;
+	cursor: pointer;
+	background-color: rgba(0,0,0,.5);
+	transition: all 0.5s;
+}
+
+.rect.active{
+	background-color: rgba(203,40,48,.9);
+	transition: all 0.5s;
+}

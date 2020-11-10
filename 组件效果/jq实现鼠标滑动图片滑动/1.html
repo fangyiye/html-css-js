@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	  <link rel='stylesheet' href='styles.css'>
+</head>
+<body>
+<div class="container-fluid project-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs">
+
+                <div class="project-slideshow">
+                    <a href="project.html" class="project-block-item" draggable="false">
+                        <picture>
+                            <img src="1.jpg" draggable="false" alt="">
+                        </picture>
+
+                        <span class="project-block-tag">Healthcare</span>
+                        <p class="project-block-title">Bringing Teesside Library’s Interior to Life</p>
+                    </a>
+                    <a href="project.html" class="project-block-item" draggable="false">
+                        <picture>
+                            <img src="1.jpg" draggable="false" alt="">
+                        </picture>
+
+                        <span class="project-block-tag">Healthcare</span>
+                        <p class="project-block-title">Crafting the BioCity Discovery Building in Nottingham</p>
+                    </a>
+                    <a href="project.html" class="project-block-item" draggable="false">
+                        <picture>
+                            <img src="1.jpg" draggable="false" alt="">
+                        </picture>
+
+                        <span class="project-block-tag">Healthcare</span>
+                        <p class="project-block-title">Bringing Teesside Library’s Interior to Life</p>
+                    </a>
+                    <a href="project.html" class="project-block-item" draggable="false">
+                        <picture>
+                            <img src="1.jpg" draggable="false" alt="">
+                        </picture>
+
+                        <span class="project-block-tag">Healthcare</span>
+                        <p class="project-block-title">Crafting the BioCity Discovery Building in Nottingham</p>
+                    </a>
+                    <a href="project.html" class="project-block-item" draggable="false">
+                        <picture>
+                            <img src="1.jpg" draggable="false" alt="">
+                        </picture>
+
+                        <span class="project-block-tag">Healthcare</span>
+                        <p class="project-block-title">Bringing Teesside Library’s Interior to Life</p>
+                    </a>
+                    <a href="project.html" class="project-block-item" draggable="false">
+                        <picture>
+                            <img src="1.jpg" draggable="false" alt="">
+                        </picture>
+
+                        <span class="project-block-tag">Healthcare</span>
+                        <p class="project-block-title">Crafting the BioCity Discovery Building in Nottingham</p>
+                    </a>
+                    <a href="project.html" class="project-block-item" draggable="false">
+                        <picture>
+                            <img src="1.jpg" draggable="false" alt="">
+                        </picture>
+
+                        <span class="project-block-tag">Healthcare</span>
+                        <p class="project-block-title">Bringing Teesside Library’s Interior to Life</p>
+                    </a>
+                    <a href="project.html" class="project-block-item" draggable="false">
+                        <picture>
+                            <img src="1.jpg" draggable="false" alt="">
+                        </picture>
+
+                        <span class="project-block-tag">Healthcare</span>
+                        <p class="project-block-title">Crafting the BioCity Discovery Building in Nottingham</p>
+                    </a>
+                    <a href="project.html" class="project-block-item" draggable="false">
+                        <picture>
+                            <img src="images/featured-project-1.jpg" draggable="false" alt="">
+                        </picture>
+
+                        <span class="project-block-tag">Healthcare</span>
+                        <p class="project-block-title">Bringing Teesside Library’s Interior to Life</p>
+                    </a>
+                    <a href="project.html" class="project-block-item" draggable="false">
+                        <picture>
+                            <img src="images/featured-project-2.jpg" draggable="false" alt="">
+                        </picture>
+
+                        <span class="project-block-tag">Healthcare</span>
+                        <p class="project-block-title">Crafting the BioCity Discovery Building in Nottingham</p>
+                    </a>
+                    <a href="project.html" class="project-block-item" draggable="false">
+                        <picture>
+                            <img src="images/featured-project-3.jpg" draggable="false" alt="">
+                        </picture>
+
+                        <span class="project-block-tag">Healthcare</span>
+                        <p class="project-block-title">Bringing Teesside Library’s Interior to Life</p>
+                    </a>
+                    <a href="project.html" class="project-block-item" draggable="false">
+                        <picture>
+                            <img src="images/featured-project-4.jpg" draggable="false" alt="">
+                        </picture>
+
+                        <span class="project-block-tag">Healthcare</span>
+                        <p class="project-block-title">Crafting the BioCity Discovery Building in Nottingham</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+  <script src='flickity.pkgd.min.js'></script>
+<script type="text/javascript">
+	document.querySelectorAll('.project-slideshow').forEach(slideshow => {
+  let options = {
+      cellAlign: 'left',
+      contain: 0,
+      dragThreshold: 15,
+      imagesLoaded: true,
+      lazyLoad: 2,
+      pageDots: false,
+      prevNextButtons: false,
+      wrapAround: true
+  };
+
+  if ( matchMedia('screen and (min-width: 960px)').matches ) {
+          options.groupCells = 3;
+          options.dragThreshold = 10;
+          options.prevNextButtons = true;
+          options.lazyLoad = 6;
+          options.draggable = true;
+          options.wrapAround = false;
+  }
+
+  const projectSlideshowFlkty = new Flickity(slideshow, options);
+});
+</script>
